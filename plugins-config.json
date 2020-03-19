@@ -16,7 +16,7 @@
         // Example: ['google chrome', 'firefox']
         // Avalible: safari, internet explorer, google chrome, firefox, opera
         "browser": "default",
-        "injectChanges": false
+        "injectChanges": true
     },
 
     "gulp-sass": {
@@ -56,7 +56,7 @@
 
     // locals option is set in ./tars.js
     "gulp-pug": {
-        "pretty": true,
+        "pretty": false,
         "basedir": "markup/insert(tars.config.fs.componentsFolderName)"
     },
 
@@ -110,6 +110,14 @@
         "indent_char": " ",
         "indent_size": 4,
         "indent_inner_html": true
+    },
+
+    "gulp-prettier": {
+        "singleQuote": true,
+        "bracketSpacing": false,
+        "trailingComma": "es5",
+        "htmlWhitespaceSensitivity": "ignore",
+        "tabWidth": 4
     },
 
     "gulp-uglify": {

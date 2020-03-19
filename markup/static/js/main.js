@@ -32,6 +32,10 @@ ready(
             NodeList.prototype.forEach = Array.prototype.forEach;
         }
 
+        Inputmask({ mask: "+7(999)999-99-99"}).mask(document.querySelectorAll('.phone-mask'));
+
+        autosize(document.querySelectorAll('textarea'));
+
     }
 );
 

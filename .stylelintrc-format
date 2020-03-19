@@ -51,7 +51,7 @@
         "function-linear-gradient-no-nonstandard-direction": true,
         "function-whitespace-after": "always",
         "length-zero-no-unit": true,
-        "max-nesting-depth": 3,
+        "max-nesting-depth": 6,
         "max-empty-lines": 5,
         "no-duplicate-selectors": true,
         "no-descending-specificity": null,
@@ -99,6 +99,11 @@
                 "type": "at-rule",
                 "name": "include",
                 "parameter": min\(\$screen-xs\)
+            },
+            {
+                "type": "at-rule",
+                "name": "include",
+                "parameter": min\(\$screen-sm\)
             },
             {
                 "type": "at-rule",

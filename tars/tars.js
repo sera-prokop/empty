@@ -197,7 +197,8 @@ tars.packages = {
     runSequence: tars.require('run-sequence'),
     sourcemaps: tars.require('gulp-sourcemaps'),
     streamCombiner: tars.require('stream-combiner'),
-    through2: tars.require('through2')
+    through2: tars.require('through2'),
+    gulpPrettier: tars.require('gulp-prettier')
 };
 
 // Links to helpers
