@@ -5,7 +5,7 @@ const gulpif = tars.packages.gulpif;
 const plumber = tars.packages.plumber;
 const notifier = tars.helpers.notifier;
 
-const prettier = tars.packages.gulpPrettier;
+const prettier = require('gulp-prettier');
 
 /**
  * Minify HTML (optional task)
