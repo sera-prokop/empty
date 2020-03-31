@@ -1,10 +1,20 @@
 'use strict';
 
+// The forEach() method of the NodeList polyfill
+if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function(callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    };
+}
+
 // LazyLoad init
 import LazyLoad from 'vanilla-lazyload';
 
 const lazyLoadOptions = {
-    elements_selector: '.lazy'
+    elements_selector: '.lazy',
 };
 
 const createLazyLoadInstance = () => {
@@ -14,30 +24,26 @@ const createLazyLoadInstance = () => {
 document.addEventListener('DOMContentLoaded', createLazyLoadInstance);
 // end LazyLoad init
 
-
 import objectFitImages from 'object-fit-images';
 
 import ready from './documentReady.js';
 
-ready(
-    function () {
-        // Polyfill for object-fit init
-        objectFitImages();
+ready(function() {
+    // Polyfill for object-fit init
+    objectFitImages();
 
-        if (!Element.prototype.matches) {
-            Element.prototype.matches = Element.prototype.msMatchesSelector;
-        }
-
-        if (window.NodeList && !NodeList.prototype.forEach) {
-            NodeList.prototype.forEach = Array.prototype.forEach;
-        }
-
-        Inputmask({ mask: "+7(999)999-99-99"}).mask(document.querySelectorAll('.phone-mask'));
-
-        autosize(document.querySelectorAll('textarea'));
-
+    if (!Element.prototype.matches) {
+        Element.prototype.matches = Element.prototype.msMatchesSelector;
     }
-);
+
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
+    Inputmask({mask: '+7(999)999-99-99'}).mask(document.querySelectorAll('.phone-mask'));
+
+    autosize(document.querySelectorAll('textarea'));
+});
 
 // Imports components
 
