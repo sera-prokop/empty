@@ -97,6 +97,10 @@
             },
             {
                 "type": "at-rule",
+                "name": "include"
+            },
+            {
+                "type": "at-rule",
                 "name": "include",
                 "parameter": min\(\$screen-xs\)
             },
