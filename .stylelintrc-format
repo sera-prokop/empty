@@ -41,8 +41,8 @@
                 ignore: ["after-comment", "inside-single-line-block"]
             }
         ],
-        "declaration-no-important": true,
-        "declaration-property-value-blacklist": {
+        "declaration-no-important": null,
+        "declaration-property-value-disallowed-list": {
             "/^margin/": ["initial"],
             "/^padding/": ["initial"],
             "flex-grow": ["initial"],
@@ -57,7 +57,7 @@
         "no-descending-specificity": null,
         "no-invalid-double-slash-comments": true,
         "number-leading-zero": "never",
-        "property-blacklist": [],
+        "property-disallowed-list": [],
         "property-no-unknown": true,
         "rule-empty-line-before": [
             "always-multi-line",
@@ -66,7 +66,7 @@
                 ignore: ["after-comment"]
             }
         ],
-        "selector-max-compound-selectors": 3,
+        "selector-max-compound-selectors": 4,
         "selector-max-id": 0,
         "selector-max-type": 1,
         "selector-max-universal": 0,
@@ -81,96 +81,62 @@
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
         "string-quotes": "single",
-        "order/order": [
-            {
-                "type": "at-rule",
-                "name": "include",
-                "parameter": "nl"
-            },
-            "at-variables",
-            "dollar-variables",
-            "custom-properties",
-            "declarations",
-            {
-                "type": "at-rule",
-                "name": "supports"
-            },
-            {
-                "type": "at-rule",
-                "name": "include"
-            },
-            {
-                "type": "at-rule",
-                "name": "include",
-                "parameter": min\(\$screen-xs\)
-            },
-            {
-                "type": "at-rule",
-                "name": "include",
-                "parameter": min\(\$screen-sm\)
-            },
-            {
-                "type": "at-rule",
-                "name": "include",
-                "parameter": min\(\$screen-md\)
-            },
-            {
-                "type": "at-rule",
-                "name": "include",
-                "parameter": min\(\$screen-lg\)
-            },
-            {
-                "type": "at-rule",
-                "name": "include",
-                "parameter": min\(\$screen-xl\)
-            },
-            {
-                "type": "at-rule",
-                "name": "include",
-                "parameter": min\(\$screen-xxl\)
-            },
-            {
-                "type": "rule",
-                "selector": "^&::(before|after),"
-            },
-            {
-                "type": "rule",
-                "selector": "^&:(before|after),"
-            },
-            {
-                "type": "rule",
-                "selector": "^&::before"
-            },
-            {
-                "type": "rule",
-                "selector": "^&:before"
-            },
-            {
-                "type": "rule",
-                "selector": "^&::after"
-            },
-            {
-                "type": "rule",
-                "selector": "^&:after"
-            },
-            {
-                "type": "rule",
-                "selector": "^&:\\w"
-            },
-            {
-                "type": "rule",
-                "selector": "^& \\+ &"
-            },
-            {
-                "type": "rule",
-                "selector": "^&_"
-            },
-            {
-                "type": "rule",
-                "selector": "^."
-            },
-            "rules"
-        ],
+#        "order/order": [
+#            {
+#                "type": "at-rule",
+#                "name": "include",
+#                "parameter": "nl"
+#            },
+#            "at-variables",
+#            "dollar-variables",
+#            "custom-properties",
+#            "declarations",
+#            {
+#                "type": "at-rule",
+#                "name": "supports"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&::(before|after),"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&:(before|after),"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&::before"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&:before"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&::after"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&:after"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&:\\w"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^& \\+ &"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^&_"
+#            },
+#            {
+#                "type": "rule",
+#                "selector": "^."
+#            },
+#            "rules"
+#        ],
         "order/properties-order": [
             "content",
             "position",

@@ -13,7 +13,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-prettier": "^2.3.0",
-    "husky": "^4.2.3",
+    "husky": "^4.2.2",
     "lint-staged": "^10.0.7",
     "postcss-inline-svg": "^4.1.0",
     "postcss-object-fit-images": "^1.1.2",
@@ -26,6 +26,11 @@
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.14.2"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -35,14 +40,6 @@
     "*.scss": [
       "prettier --write",
       "stylelint --syntax=scss --fix --config ./.stylelintrc-format"
-    ],
-    "markup/**/*.js": [
-      "prettier --write"
     ]
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

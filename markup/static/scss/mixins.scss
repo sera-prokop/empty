@@ -1,4 +1,5 @@
 // Mixins.
+/* stylelint-disable */
 
 @mixin nl {
     margin: 0;
@@ -12,7 +13,7 @@
     &:before,
     &:after {
         display: table;
-        content: "";
+        content: '';
     }
 
     &:after {
@@ -30,13 +31,11 @@
 }
 
 // You can add your own mixins here:
-@mixin min($val){
-    @media screen and (min-width: $val){
-        @content
+@mixin min($val) {
+    @media screen and (min-width: $val) {
+        @content;
     }
 }
-
-
 
 // Browser Prefixes
 @mixin transform($transforms) {
@@ -47,7 +46,7 @@
 }
 
 // Rotate
-@mixin rotate ($deg) {
+@mixin rotate($deg) {
     @include transform(rotate(#{$deg}deg));
 }
 
@@ -57,30 +56,26 @@
 }
 
 // Translate
-@mixin translate ($x, $y) {
+@mixin translate($x, $y) {
     @include transform(translate($x, $y));
 }
 
 // Skew
-@mixin skew ($x, $y) {
+@mixin skew($x, $y) {
     @include transform(skew(#{$x}deg, #{$y}deg));
 }
 
 // Transform Origin
-@mixin transform-origin ($origin) {
+@mixin transform-origin($origin) {
     -webkit-transform-origin: $origin;
     -moz-transform-origin: $origin;
     -ms-transform-origin: $origin;
     transform-origin: $origin;
 }
 
-
-
-@mixin focus-shadow{
+@mixin focus-shadow {
     box-shadow: 0 0 3px 2px rgba($color-main, 0.2);
 }
-
-
 
 @mixin field-name {
     display: block;
@@ -93,7 +88,9 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    min-height: calc(#{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px); // Привет, IE
+    min-height: calc(
+        #{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px
+    ); // Привет, IE
     margin: 0;
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -102,7 +99,7 @@
     font-size: 1em;
     font-family: inherit;
     background-color: #fff;
-    -moz-appearance: textfield; // stylelint-disable-line
+    -moz-appearance: textfield;
     appearance: textfield;
 
     &:focus {
@@ -119,7 +116,7 @@
     &::-webkit-search-decoration,
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
-        -webkit-appearance: none; // stylelint-disable-line  property-no-vendor-prefix
+        -webkit-appearance: none;
     }
 
     &[type='color'] {
@@ -137,3 +134,4 @@
     box-shadow: 0 0 0 2px rgba($color-main, $opacity);
 }
 
+/* stylelint-enable */
